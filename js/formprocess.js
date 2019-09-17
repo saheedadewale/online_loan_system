@@ -1,6 +1,12 @@
 $(document).ready(function(){
-    
-    $('#createAcct').click(function(){
+    //hide login form
+    $('.loginLink').click(function(event){
+        event.preventDefault();
+       $('.loginFormWrapper').hide();
+       $('.loginWrapper').fadeIn();
+    });
+    $('#createAcct').click(function(event){
+        event.preventDefault();
         const surname = $('#surname').val();
         const othername = $('#othername').val();
         const email = $('#email').val();

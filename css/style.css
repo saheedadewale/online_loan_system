@@ -73,7 +73,7 @@
   .main-content button {
     padding: 10px;
     border: none;
-    background: orange;
+    background: #38bc8a;
     color: #fff;
     border-radius: 4px;
   }
@@ -88,6 +88,27 @@
   .closeLoginBtn {
     font-size: 50px;
     color: #dd0d0d;
+  }
+  .loginFormWrapper{
+    border:1px solid orange;
+    padding: 10px;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  
+  }
+  .loginWrapper{
+    border:1px solid orange;
+    padding: 10px;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    border-radius: 4px;
+    display: none;
+    margin-top: 30px;
+    margin-bottom: 50px;
   }
   
   
