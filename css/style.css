@@ -32,7 +32,7 @@
     padding: 0 10px;
     cursor: pointer;
   }
-  .homeNav ul li a {
+  .homeNav ul a li{
     display: inline-block;
     line-height: 50px;
     padding: 0 10px;
@@ -77,6 +77,9 @@
     color: #fff;
     border-radius: 4px;
   }
+  .msg{
+    color: #dd0d0d;
+  }
   .regForm,
   .loginForm {
     display: none;
@@ -86,4 +89,26 @@
     font-size: 50px;
     color: #dd0d0d;
   }
+  .loginFormWrapper{
+    border:1px solid orange;
+    padding: 10px;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  
+  }
+  .loginWrapper{
+    border:1px solid orange;
+    padding: 10px;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    border-radius: 4px;
+    display: none;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  
   

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Online Loan Application </title>
+<!--bootstrap cdn link -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">	
+<link rel="stylesheet" href="css/style.css">
+<style>
+ 
+    .jumbotronFooter{
+      height: 200px;
+      background-color: black;
+      padding: 10px;
+      margin-bottom: 0px;
+      border-radius: 0px;
+        }
+    .container{
+        margin-top: 10px;
+    }
+    html,body{
+        color: orange;
+    }
+    .loginLink a{
+        color: orange;
+        font-weight: bold;   
+    }
+    .loginLink a:hover{
+        color: grey;
+        font-weight: bold;   
+    }
+
+</style>
+</head>
+<body>
+<!-- navbar -->
+<nav class="homeNav">
+   <span class="logo"> Online Loan System</span>
+        <ul>
+          <a href="index.html"><li>Home</li></a>
+          <li>About</li>
+          <li>Contact</li>
+          <li class="registerBtn">Get Loan</li>
+          
+        </ul>
+      </nav><!--end nav-->
+<!--main content -->
+<main class="main-content">    
+    <div class="container">
+       <div class="row">
+           <div class="col-lg-3">
+                
+           </div>
+           <div class="col-lg-6 text-center">
+               <div class="loginFormWrapper">
+                    <p>Create An Account </p>
+               <p class="msg"></p>
+                <div class="form-group">
+                    <input type="text" name="surname" id="surname" class="form-control" placeholder="Enter Surname">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="othername" id="othername" class="form-control" placeholder="Enter Othername">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="phoneno" id="phoneno" class="form-control" placeholder="Enter Phone Number">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="bvn" id="bvn" class="form-control" placeholder="Enter BVN">
+                </div>
+                <p class="regMessage"></p>
+                <div class="form-group text-left">
+                    <button class="btn btn-success" id="createAcct">Create My Account </button> | Already Have an account? <a href="" class="loginLink" style="color: orange; font-weight: bold;"> Login</a>
+                </div>
+               </div><!--end signup -->
+                <!--begin login -->
+               <div class="loginWrapper">
+                   <p>Login [Registered Users]</p>
+                    <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="phoneno" id="phoneno" class="form-control" placeholder="Enter Phone Number">
+                        </div>
+                        <p class="regMessage"></p>
+                <div class="form-group text-left">
+                    <button class="btn btn-success" id="createAcct">Login </button> | Are you a new User? <a href="" class="signuplink" style="color: orange; font-weight: bold;"> SignUp</a>
+                </div>
+               </div>
+                <!--end Login -->
+
+           </div>
+           <div class="col-lg-3">
+               
+           </div>
+       </div>
+    </div>
+</main><!--end main content --><!--footer -->
+<footer> 
+    <div class="jumbotron jumbotronFooter">
+        <div class="container">
+            <div class="row">                
+                <div class="col-lg-4">
+                </div>
+            </div>
+           <p class="text-center" style="color:#fff"> &copy; 2019 Decagon Software Institute</p>
+        </div>
+            
+    </div>
+</footer><!--end footer -->
+<!--adding jQuery -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/formprocess.js"></script>
+
+</body>
+</html>
