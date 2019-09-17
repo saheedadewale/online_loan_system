@@ -19,7 +19,9 @@
       margin-bottom: 0px;
       border-radius: 0px;
         }
-
+    body{
+        height: 100%;
+    }
 
 </style>
 </head>
@@ -27,14 +29,25 @@
 <!-- navbar -->
 <nav class="homeNav">
    <span class="logo"> Online Loan System</span>
-        
-      </nav>
-<!--end nav-->
+</nav><!--end nav-->
 <!--main content -->
 <main class="main-content">
-    
-</main>
-<!--end main content -->
+    <div class="container-fluid">
+        <div class="row">
+                <div class="col-lg-3" style="border-left-width: 2px; border-left-color: rgb(60,179,113); border-left-style: solid;">
+                        <ul class="list-group list-group-flush" id="mymenu">
+                              <a href="#"><li class="list-group-item"><i class="icon-home"></i> Dashboard Home</li></a>
+                               <a href="#"><li class="list-group-item"><i class="icon-user"></i> My Loan</li></a>
+                              <a href="#"> <li class="list-group-item"><i class="icon-user"></i> Profile</li></a>
+                               <li class="list-group-item"><i class="icon-power-off"></i> Logout</li>
+                        </ul>
+                    </div>
+            <div class="col-lg-9">
+                main body
+            </div>
+        </div>
+    </div>
+</main><!--end main content -->
 <!--footer -->
 <footer> 
     <div class="jumbotron jumbotronFooter">
