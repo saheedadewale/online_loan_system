@@ -70,13 +70,13 @@
     border: 1px solid #999;
     border-radius: 4px;
   }
-  .main-content button {
+  /* .main-content button {
     padding: 10px;
     border: none;
     background: #38bc8a;
     color: #fff;
     border-radius: 4px;
-  }
+  } */
   .regForm,
   .loginForm {
     display: none;

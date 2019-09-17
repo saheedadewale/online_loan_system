@@ -6,9 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Online Loan Application </title>
 <!--bootstrap cdn link -->
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">	
 <link rel="stylesheet" href="css/style.css">
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <style>
      
 
@@ -22,6 +24,10 @@
     body{
         height: 100%;
     }
+    .container{
+        padding: 20px;
+    }
+  
 
 </style>
 </head>
@@ -32,18 +38,116 @@
 </nav><!--end nav-->
 <!--main content -->
 <main class="main-content">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-                <div class="col-lg-3" style="border-left-width: 2px; border-left-color: rgb(60,179,113); border-left-style: solid;">
+                <div class="col-lg-3">
                         <ul class="list-group list-group-flush" id="mymenu">
                               <a href="#"><li class="list-group-item"><i class="icon-home"></i> Dashboard Home</li></a>
-                               <a href="#"><li class="list-group-item"><i class="icon-user"></i> My Loan</li></a>
-                              <a href="#"> <li class="list-group-item"><i class="icon-user"></i> Profile</li></a>
+                              <a href="#"> <li class="list-group-item"><i class="icon-user"></i> Update Profile</li></a>
+                              <a href="#"><li class="list-group-item"><i class="icon-user"></i> Loan Application </li></a>
+                              <a href="#"><li class="list-group-item"><i class="icon-user"></i> My Loan</li></a>
+                              
                                <li class="list-group-item"><i class="icon-power-off"></i> Logout</li>
                         </ul>
                     </div>
             <div class="col-lg-9">
-                main body
+                    <p class="alert alert-success"> <strong>Welcome User! </strong> Kindly note that everything you do here is very important</p>
+                   <!--myloan--> <div class="myloan">
+                        <p class="text-right"><button class="btn btn-success btn-sm"> New Loan </button></p>
+                        <p class="text-center">YOUR LOAN HISTORY</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Package</th>
+                                    <th>Amount</th>
+                                    <th>Date Applied</th>
+                                    <th>Tenor</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Bronze</td>
+                                    <td>15,000</td>
+                                    <td>Today</td>
+                                    <td>1 Month</td>
+                                    <td>Not yet Approve</td>
+                                    <td><button class="btn btn-danger btn-sm">Detele</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!--end myloan -->
+                    <!--loan application-->
+                    <div class="loanApplication">
+                        <p class="text-center">LOAN APPLICATION FORM</p>
+                        <div class="form-group">
+                            <input type="text" name="employer" id="employer" placeholder="Enter Your Employer" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="state" id="state">
+                                <option>--Which State do you work--</option>
+                                <option>Lagos</option>
+                                <option>Abuja</option>
+                                <option>Oyo</option>
+                                <option>Osun</option>
+                                <option>Ogun</option>
+                                <option>Ondo</option>
+                                <option>Ekiti</option>
+                                <option>Kwara</option>
+                                <option>Delta</option>
+                                <option>Edo</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                                <select class="form-control" name="bank" id="bank">
+                                        <option>--Select Your Bank [Salary Bank]--</option>
+                                        <option>First Bank</option>
+                                        <option>GTB</option>
+                                        <option>Wema</option>
+                                        <option>Sterling</option>
+                                        <option>Jaiz</option>
+                                        <option>UBA</option>
+                                        <option>FCMB</option>
+                                        <option>Union</option>
+                                        <option>Stanbic</option>
+                                        <option>Skye</option>
+        
+                                    </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="acctno" id="acctno" placeholder="Enter Your Account Number [Salary Account]" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="netsalary" id="netsalary" placeholder="Enter Your Net Salary" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Amount Eligible</label>
+                            <input type="number" name="eligibleamt" id="eligibleamt" placeholder=" " class="form-control">
+                        </div>
+                        <div class="form-group">
+                               
+                                <input type="number" name="lesseramt" id="lesseramt" placeholder="Enter Lesser Amount" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="tenor" id="tenor">
+                                    <option>---Select Loan Tenor---</option>
+                                    <option>1 Month</option>
+                                    <option>2 Month</option>
+                                    <option>3 Month</option>
+                                    <option>4 Month</option>
+                                    <option>5 Month</option>
+                                    <option>6 Month</option>
+                                    <option>12 Month</option>
+                                </select>
+                            </div>
+                            <div>
+                                <button class="btn btn-success btn-sm">Apply Now</button>
+                            </div>
+                    </div><!--end loan application -->
             </div>
         </div>
     </div>
