@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "fullname": "Mike Adenuga",
+      "username": "mike",
+      "email": "adenuga@glo.com",
+      "password": "1234567890",
+      "id": 1
+    },
+    {
+      "fullname": "Tega",
+      "username": "whitehox",
+      "email": "teg@yahoo.com",
+      "password": "1234567890",
+      "id": 2
+    },
+    {
+      "fullname": "saheed adewale",
+      "username": "saheedbaba",
+      "email": "o.adewale17@gmail.com",
+      "password": "saheedbaba",
+      "id": 3
+    }
+  ],
+  "post": [],
+  "comment": []
+}
