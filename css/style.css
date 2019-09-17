@@ -73,9 +73,12 @@
   .main-content button {
     padding: 10px;
     border: none;
-    background: #38bc8a;
+    background: orange;
     color: #fff;
     border-radius: 4px;
+  }
+  .msg{
+    color: #dd0d0d;
   }
   .regForm,
   .loginForm {
@@ -86,4 +89,5 @@
     font-size: 50px;
     color: #dd0d0d;
   }
+  
   
