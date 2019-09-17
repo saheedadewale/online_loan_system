@@ -9,30 +9,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">	
 <link rel="stylesheet" href="css/style.css">
 <style>
-     .jumbotrons{
-    height: 450px;
-    background-image: url('images/bgimg.jpg');
-    background-color: transparent;
-    background-position: center;
-    background-size: cover;
-    padding-top: 220px;
-    border-radius: 0px;
-  }
-  .jumbotrons h2{
-      color: #fff;
-  }
-  .jumbotrons p{
-      color: orange;
-  }
-  .jumbotronSection{
-      height: 400px;
-      background-color: transparent;
-        }
-        .jumbotronSection1{
-      height: 450px;
-      background-color: whitesmoke;
-      padding: 10px;
-        }
+ 
     .jumbotronFooter{
       height: 200px;
       background-color: black;
@@ -40,21 +17,20 @@
       margin-bottom: 0px;
       border-radius: 0px;
         }
-.applyHead{
-     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     font-weight: bold;
-     font-size: 18px;
-     color: orange;  
-     padding-bottom: 0px;
- }
- .col-lg-3{
-     padding-top: 10px;
- }
-.col-lg-3:hover{
-    border: 1px solid orange;
-    box-shadow: 3px 3px orange;
-    cursor: pointer;
-}
+    .container{
+        margin-top: 10px;
+    }
+    html,body{
+        color: orange;
+    }
+    .loginLink a{
+        color: orange;
+        font-weight: bold;   
+    }
+    .loginLink a:hover{
+        color: grey;
+        font-weight: bold;   
+    }
 
 </style>
 </head>
@@ -69,18 +45,65 @@
           <li class="registerBtn">Get Loan</li>
           
         </ul>
-      </nav>
-<!--end nav-->
+      </nav><!--end nav-->
 <!--main content -->
-<main class="main-content">
-    
-</main>
-<!--end main content -->
-<!--footer -->
+<main class="main-content">    
+    <div class="container">
+       <div class="row">
+           <div class="col-lg-3">
+                
+           </div>
+           <div class="col-lg-6 text-center">
+               <div class="loginFormWrapper">
+                    <p>Create An Account </p>
+               <p class="msg"></p>
+                <div class="form-group">
+                    <input type="text" name="surname" id="surname" class="form-control" placeholder="Enter Surname">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="othername" id="othername" class="form-control" placeholder="Enter Othername">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="phoneno" id="phoneno" class="form-control" placeholder="Enter Phone Number">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="bvn" id="bvn" class="form-control" placeholder="Enter BVN">
+                </div>
+                <p class="regMessage"></p>
+                <div class="form-group text-left">
+                    <button class="btn btn-success" id="createAcct">Create My Account </button> | Already Have an account? <a href="" class="loginLink" style="color: orange; font-weight: bold;"> Login</a>
+                </div>
+               </div><!--end signup -->
+                <!--begin login -->
+               <div class="loginWrapper">
+                   <p>Login [Registered Users]</p>
+                    <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="phoneno" id="phoneno" class="form-control" placeholder="Enter Phone Number">
+                        </div>
+                        <p class="regMessage"></p>
+                <div class="form-group text-left">
+                    <button class="btn btn-success" id="createAcct">Login </button> | Are you a new User? <a href="" class="signuplink" style="color: orange; font-weight: bold;"> SignUp</a>
+                </div>
+               </div>
+                <!--end Login -->
+
+           </div>
+           <div class="col-lg-3">
+               
+           </div>
+       </div>
+    </div>
+</main><!--end main content --><!--footer -->
 <footer> 
     <div class="jumbotron jumbotronFooter">
         <div class="container">
-            <div class="row">
+            <div class="row">                
                 <div class="col-lg-4">
                 </div>
             </div>
@@ -88,7 +111,10 @@
         </div>
             
     </div>
-</footer>
-<!--end footer -->
+</footer><!--end footer -->
+<!--adding jQuery -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/formprocess.js"></script>
+
 </body>
 </html>

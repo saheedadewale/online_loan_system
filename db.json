@@ -1,4 +1,21 @@
 {
-  "userstable": [],
+  "userstable": [
+    {
+      "surname": "Oladele",
+      "othername": "Adewle",
+      "email": "o.adewale17@gmail.com",
+      "phoneno": "08038857000",
+      "bvn": "33455566",
+      "id": 1
+    },
+    {
+      "surname": "Odewale",
+      "othername": "Lawal",
+      "email": "shaeedyusuf@yahoo.com",
+      "phoneno": "09065554432",
+      "bvn": "33455566",
+      "id": 2
+    }
+  ],
   "loantable": []
 }
