@@ -9,30 +9,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">	
 <link rel="stylesheet" href="css/style.css">
 <style>
-     .jumbotrons{
-    height: 450px;
-    background-image: url('images/bgimg.jpg');
-    background-color: transparent;
-    background-position: center;
-    background-size: cover;
-    padding-top: 220px;
-    border-radius: 0px;
-  }
-  .jumbotrons h2{
-      color: #fff;
-  }
-  .jumbotrons p{
-      color: orange;
-  }
-  .jumbotronSection{
-      height: 400px;
-      background-color: transparent;
-        }
-        .jumbotronSection1{
-      height: 450px;
-      background-color: whitesmoke;
-      padding: 10px;
-        }
+ 
     .jumbotronFooter{
       height: 200px;
       background-color: black;
@@ -40,21 +17,9 @@
       margin-bottom: 0px;
       border-radius: 0px;
         }
-.applyHead{
-     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     font-weight: bold;
-     font-size: 18px;
-     color: orange;  
-     padding-bottom: 0px;
- }
- .col-lg-3{
-     padding-top: 10px;
- }
-.col-lg-3:hover{
-    border: 1px solid orange;
-    box-shadow: 3px 3px orange;
-    cursor: pointer;
-}
+    .container{
+        margin-top: 10px;
+    }
 
 </style>
 </head>
@@ -71,37 +36,44 @@
         </ul>
       </nav><!--end nav-->
 <!--main content -->
-<main class="main-content">
-        <div class="row">
-        <div class="col-lg-4 col-sm-12">
+<main class="main-content">    
+    <div class="container">
+       <div class="row">
+           <div class="col-lg-3">
+                
+           </div>
+           <div class="col-lg-6 text-center">
+               <p>Create An Account </p>
+                <div class="form-group">
+                    <input type="text" name="surname" class="form-control" placeholder="Enter Surname">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="othername" class="form-control" placeholder="Enter Othername">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="phoneno" class="form-control" placeholder="Enter Phone Number">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="bvn" class="form-control" placeholder="Enter BVN">
+                </div>
+                <div class="form-group text-left">
+                    <button class="btn btn-warning">Create My Account </button>
+                </div>
 
-        </div>
-                <div class="col-lg-4">
-                        <p class="loginTitle">Create An Account</p>
-                        <div class="loginWrapper">
-                            <form method="post">
-                            <div class="form-group">
-                                <label>Username:</label>
-                                <input type="text" name="username" placeholder="Enter Username" class="form-control" id="username">
-                            </div>
-                            <div class="form-group">
-                                <label>Password:</label>
-                                <input type="password" name="password" placeholder="Enter Password" class="form-control" id="password">
-                            </div>
-                            <div class="form-group">
-                                
-                                <button class="btn btn-success btn-sm"><i class="far fa-user"></i> Login</button>
-                            </div>
-                        </form>
-                        </div>
-                    </div>
-        </div>
-</main><!--end main content -->
-<!--footer -->
+           </div>
+           <div class="col-lg-3">
+               
+           </div>
+       </div>
+    </div>
+</main><!--end main content --><!--footer -->
 <footer> 
     <div class="jumbotron jumbotronFooter">
         <div class="container">
-            <div class="row">
+            <div class="row">                
                 <div class="col-lg-4">
                 </div>
             </div>
