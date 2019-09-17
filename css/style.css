@@ -11,9 +11,9 @@
   .homeNav {
     width: 100%;
     height: 80px;
-    color: #38bc8a;
+    color: orange;
     background-color: #fff;
-    border-bottom-color: #38bc8a;
+    border-bottom-color: orange;
     border-bottom-style: solid;
     border-bottom-width: 4px;
   }
@@ -37,7 +37,7 @@
     line-height: 50px;
     padding: 0 10px;
     cursor: pointer;
-    color: #38bc8a;
+    color: orange;
   }
   .homeNav ul li:hover {
     display: inline-block;
@@ -46,7 +46,7 @@
     cursor: pointer;
     border-bottom-style: solid;
     border-bottom-width: 2px;
-    border-bottom-color:#38bc8a;
+    border-bottom-color:orange;
   }
   .logo{
       float: left;
@@ -57,11 +57,7 @@
     font-size: 25px;
 
   }
-  .jumbotrons{
-    height: 400px;
-    background-image: url('images/bgimg.jpg');
-    background-color: transparent
-  }
+
   .main-content form {
     width: 50%;
     height: fit-content;
