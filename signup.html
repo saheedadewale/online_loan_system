@@ -23,6 +23,14 @@
     html,body{
         color: orange;
     }
+    .loginLink a{
+        color: orange;
+        font-weight: bold;   
+    }
+    .loginLink a:hover{
+        color: grey;
+        font-weight: bold;   
+    }
 
 </style>
 </head>
@@ -48,22 +56,22 @@
            <div class="col-lg-6 text-center">
                <p>Create An Account </p>
                 <div class="form-group">
-                    <input type="text" name="surname" class="form-control" placeholder="Enter Surname">
+                    <input type="text" name="surname" id="surname" class="form-control" placeholder="Enter Surname">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="othername" class="form-control" placeholder="Enter Othername">
+                    <input type="text" name="othername" id="othername" class="form-control" placeholder="Enter Othername">
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Enter Email">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
                 </div>
                 <div class="form-group">
-                    <input type="number" name="phoneno" class="form-control" placeholder="Enter Phone Number">
+                    <input type="number" name="phoneno" id="phoneno" class="form-control" placeholder="Enter Phone Number">
                 </div>
                 <div class="form-group">
-                    <input type="number" name="bvn" class="form-control" placeholder="Enter BVN">
+                    <input type="number" name="bvn" id="bvn" class="form-control" placeholder="Enter BVN">
                 </div>
                 <div class="form-group text-left">
-                    <button class="btn btn-warning">Create My Account </button> | Already Have an account? <a href=""> Login</a>
+                    <button class="btn btn-warning" class="createAcct">Create My Account </button> | Already Have an account? <a href="" class="loginLink"> Login</a>
                 </div>
 
            </div>
@@ -85,5 +93,9 @@
             
     </div>
 </footer><!--end footer -->
+<!--adding jQuery -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/formprocess.js"></script>
+
 </body>
 </html>
