@@ -41,6 +41,20 @@ $(document).ready(function(){
        $('.loginFormWrapper').hide();
        $('.loginWrapper').fadeIn();
     });
+
+    //fetching record
+    // function getUserDetails(e){
+    //  // e.preventDefault();
+    //   $.getJSON("http://localhost:3004/profile",function(obj){
+    //     let items =[];
+    //     $.each(obj, function(key, value){
+    //     items.push(value);
+    //     }); 
+    //   })
+    //   console.log(items);
+    // }
+    // getUserDetails();
+
     $('#createAcct').click(function(event){
         event.preventDefault();
         const surname = $('#surname').val();
@@ -167,6 +181,63 @@ $(document).ready(function(){
     }
     //involke fetch function
     getLoanDetails();
+   function fetchRec(){
+     let items = [];
+     let mail = "saheed@gmail.com"
+     $.ajax({
+        method: 'GET',
+        url:`http://localhost:3004/profile?emails=${mail}`,
+        success: function(data){
+          $.each(data, function(key,value){
+           // items.push(value);
+           console.log(value)
+           $(`input[name='${key}']`).val(value)
+         // $('#surnames').val(value.surnames)
+          })
+        }
+
+     });
+    //  console.log(items);
+   }
+   fetchRec();
+    
+   
+   
+    //LOAD INFORMATION FROM DB;
+    // function userProf(fetch) { 
+
+    //   var cout = new Array();
+    //   var nm = new Array();
+    //   var live = '';
+    //   var strs = 
+    //       $.ajax({
+    //         url: "check.php",
+    //         type: "POST",
+    //         data: {fetch:fetch},
+    //         success: function (data) { 
+
+    //           if (data) { 
+    //             cout = data.split('`>'); 
+    //             for (var i= 1; i < cout.length; i++) {
+    //               $('.in'+i).val(cout[i]);
+    //               $('.p'+i).html(cout[i]);
+    //               $('#pack'+i).html(cout[i]);
+    //               $('#uploadPic'+i).attr('src',cout[i]);
+    //               $('#pac'+i).html(formatCurrency(cout[i]));
+    //               $('.count'+i).html(formatCurrency(cout[i]));
+    //               if (i==5) {
+    //                 live = cout[i];
+    //               }if (i == 6) {
+    //                 live = live + ", " +cout[i];
+    //               }
+    //               $('.p56').html(live); 
+    //             }
+    //           }
+    //         }
+    //       });
+    // }
+
+    
 //update profile
 
 $('#update').click(function(e){
