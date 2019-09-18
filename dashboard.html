@@ -42,19 +42,26 @@
         <div class="row">
                 <div class="col-lg-3">
                         <ul class="list-group list-group-flush" id="mymenu">
-                              <a href="#"><li class="list-group-item"><i class="icon-home"></i> Dashboard Home</li></a>
-                              <a href="#"> <li class="list-group-item"><i class="icon-user"></i> Update Profile</li></a>
-                              <a href="#"><li class="list-group-item"><i class="icon-user"></i> Loan Application </li></a>
-                              <a href="#"><li class="list-group-item"><i class="icon-user"></i> My Loan</li></a>
+                              <a href="#"><li class="list-group-item" id="homeLink"><i class="icon-home"></i> Dashboard Home</li></a>
+                              <a href="#"> <li class="list-group-item" id="updateLink"><i class="icon-user"></i> Update Profile</li></a>
+                              <a href="#"><li class="list-group-item" id="loanApplink"><i class="icon-user"></i> Loan Application </li></a>
+                              <a href="#"><li class="list-group-item" id="myLoanlink"><i class="icon-user"></i> My Loan</li></a>
                               
                                <li class="list-group-item"><i class="icon-power-off"></i> Logout</li>
                         </ul>
                     </div>
             <div class="col-lg-9">
-                    <p class="alert alert-success"> <strong>Welcome User! </strong> Kindly note that everything you do here is very important</p>
+                    <div class="welcome">
+                            <div class="alert alert-success" role="alert">
+                                    <h4 class="alert-heading">Welcome User</h4>
+                                    <p>Hello, warmth welcome to Decagon Loan Application Portal, we promise to serve you well, however, yoour trust is very important to us, please click on <strong>Update Profile</strong> to update your profile if you have not done so.</p>
+                                    <hr>
+                                    <p class="mb-0">Enjoy the best of our Service!</p>
+                                  </div>
+                    </div>
                    <!--myloan--> <div class="myloan">
                         <p class="text-right"><button class="btn btn-success btn-sm"> New Loan </button></p>
-                        <p class="text-center">YOUR LOAN HISTORY</p>
+                        <p class="text-center" id="title">YOUR LOAN HISTORY</p>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -74,7 +81,7 @@
                     </div><!--end myloan -->
                     <!--loan application-->
                     <div class="loanApplication">
-                        <p class="text-center">LOAN APPLICATION FORM</p>
+                        <p class="text-center" id="title">LOAN APPLICATION FORM</p>
                         <div class="form-group">
                             <input type="text" name="employer" id="employer" placeholder="Enter Your Employer" class="form-control">
                         </div>
@@ -144,7 +151,7 @@
                     </div><!--end loan application -->
 
                     <div class="update">
-                        <p>UPDATE PROFILE</p>
+                        <p id="title">UPDATE PROFILE</p>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
@@ -253,7 +260,7 @@
                                                         </div>
                                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                                         <div class="form-group">
-                                                                <select class="form-control" name="state" id="state">
+                                                                <select class="form-control" name="state" id="states">
                                                                         <option>--Which State do you work--</option>
                                                                         <option>Lagos</option>
                                                                         <option>Abuja</option>
@@ -296,7 +303,9 @@
                                                              </div>
                                                              </div>
                                                         </div>
+                                                        <p class="profilMessage"></p>
                                                         <div class="row">
+                                                            
                                                             <div class="col-lg-6">
                                                                 <button class="btn btn-success" id="update">Update Profile</button>
                                                             </div>

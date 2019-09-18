@@ -42,5 +42,27 @@
       "id": 2
     }
   ],
-  "profile":[]
+  "profile": [
+    {
+      "surnames": "Adewale",
+      "othernames": "Saheed",
+      "phonenos": "08077888688",
+      "emails": "saheed@gmail.com",
+      "bvns": "5643856",
+      "sexs": "Male",
+      "dob": "2019-09-11",
+      "marital": "Single",
+      "nofchild": "0",
+      "homeaddress": "Samanda",
+      "nextName": "Adekola",
+      "relation": "Sister",
+      "nextphone": "0806677575",
+      "nextaddress": "Somewhere in lagos",
+      "employers": "Dangote sugar",
+      "states": "Lagos",
+      "banks": "FCMB",
+      "accountNo": "840453",
+      "id": 1
+    }
+  ]
 }

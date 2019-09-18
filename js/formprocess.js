@@ -1,8 +1,41 @@
 $(document).ready(function(){
     //hide login form
-    let myDate = $.now();
-    console.log(myDate);
+    $('.myloan').hide();
+    $('.loanApplication').hide();
+    $('.update').hide();
     
+    $('#homeLink').click(function(e){
+      e.preventDefault();
+      $('.myloan').hide();
+      $('.loanApplication').hide();
+      $('.update').hide();
+      $('.welcome').fadeIn();
+    });
+
+    $('#updateLink').click(function(e){
+      e.preventDefault();
+      $('.myloan').hide();
+      $('.loanApplication').hide();
+      $('.update').fadeIn();
+      $('.welcome').hide();
+    });
+
+    $('#loanApplink').click(function(e){
+      e.preventDefault();
+      $('.myloan').hide();
+      $('.loanApplication').fadeIn();
+      $('.update').hide();
+      $('.welcome').hide();
+    });
+
+    $('#myLoanlink').click(function(e){
+      e.preventDefault();
+      $('.myloan').fadeIn();
+      $('.loanApplication').hide();
+      $('.update').hide();
+      $('.welcome').hide();
+    })
+
     $('.loginLink').click(function(event){
         event.preventDefault();
        $('.loginFormWrapper').hide();
@@ -132,5 +165,66 @@ $(document).ready(function(){
        
       });
     }
+    //involke fetch function
     getLoanDetails();
+//update profile
+
+$('#update').click(function(e){
+e.preventDefault();
+const surnames = $('#surnames').val();
+const othernames = $('#othernames').val();
+const phonenos = $('#phonenos').val();
+const emails = $('#emails').val();
+const bvns = $('#bvns').val();
+const sexs = $('#sexs').val();
+const dob = $('#dob').val();
+const marital = $('#marital').val();
+const nofchild = $('#nofchild').val();
+const homeaddress = $('#homeaddress').val();
+const nextName = $('#nextName').val();
+const relation = $('#relation').val();
+const nextphone = $('#nextphone').val();
+const nextaddress = $('#nextaddress').val();
+const employers = $('#employers').val();
+const states = $('#states').val();
+const banks = $('#banks').val();
+const accountNo = $('#accountNo').val();
+//prevent user empty submission
+if(!surnames || !othernames || !phonenos || !employers || !accountNo || ! banks){
+  alert("Field Left Unsupply");
+  return false;
+}else{
+   //making post request to the loan endpoint
+  $.ajax({
+    method: 'POST',
+    url: 'http://localhost:3004/profile', 
+    data: {
+      surnames,
+      othernames,
+      phonenos,
+      emails,
+      bvns,
+      sexs,
+      dob,
+      marital,
+      nofchild,
+      homeaddress,
+      nextName,
+      relation,
+      nextphone,
+      nextaddress,
+      employers,
+      states,
+      banks,
+      accountNo,
+    },
+    beforeSend: function() {
+      $('.profilMessage').html('Please Waite While Loading...');
+    },
+    success: function() {
+      $('.profilMessage').html('Profile Updated Successfully');
+    },
+  });
+}
+});
 });

@@ -70,6 +70,58 @@
     border: 1px solid #999;
     border-radius: 4px;
   }
+  #title{
+    text-align: center;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: orange;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .update{
+    height: auto;
+    padding: 15px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: orange;
+  }
+
+  .myloan{
+    height: auto;
+    padding: 15px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: orange;
+  }
+
+  .loanApplication{
+    height: auto;
+    padding: 15px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: orange;
+  }
+  input[type="text"],input[type="number"],input[type="email"]{
+    color: orange;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: orange;
+  }
+  select  {
+    color: orange;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: orange;
+  }
   /* .main-content button {
     padding: 10px;
     border: none;
