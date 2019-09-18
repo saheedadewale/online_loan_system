@@ -170,7 +170,7 @@ $(document).ready(function(){
                   <td>${value.currentDate}</td>
                   <td>${value.tenor}</td>
                   <td>${value.status}</td>
-                  <td><button class="btn btn-danger btn-sm">Detele</button></td>
+                  <td><button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Detele</button></td>
             </tr>
             `;
           });
@@ -183,16 +183,20 @@ $(document).ready(function(){
     getLoanDetails();
    function fetchRec(){
      let items = [];
-     let mail = "saheed@gmail.com"
+     let mail = "o.adewale17@gmail.com"
      $.ajax({
         method: 'GET',
-        url:`http://localhost:3004/profile?emails=${mail}`,
+        url:`http://localhost:3004/userstable?emails=${mail}`,
         success: function(data){
           $.each(data, function(key,value){
            // items.push(value);
            console.log(value)
-           $(`input[name='${key}']`).val(value)
-         // $('#surnames').val(value.surnames)
+           //$(`input[name='${key}']`).val(value)
+         $('#surnames').val(value.surname)
+         $('#othernames').val(value.othername)
+         $('#emails').val(value.email)
+         $('#phonenos').val(value.phoneno)
+         $('#bvns').val(value.bvn)
           })
         }
 

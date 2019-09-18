@@ -122,6 +122,29 @@
     border-bottom-width: 2px;
     border-bottom-color: orange;
   }
+  #mymenu{
+		color: orange;
+		margin-left: 0px;
+		padding-left: 0px;
+	}
+	.list-group-item:hover{
+		background-color: orange;
+		color: #fff;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		border-bottom-color:orange;
+  }
+  a{
+		text-decoration: none;
+		color: inherit;
+	}
+	a:hover{
+		text-decoration: none;
+		color: inherit;
+  }
+  #logout{
+    cursor: pointer;
+  }
   /* .main-content button {
     padding: 10px;
     border: none;

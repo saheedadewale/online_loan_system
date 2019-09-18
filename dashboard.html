@@ -10,7 +10,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">	
 <link rel="stylesheet" href="css/style.css">
 
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+<link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
 <style>
      
 
@@ -22,7 +23,8 @@
       border-radius: 0px;
         }
     body{
-        height: 100%;
+        margin: 0;
+        padding: 0; 
     }
     .container{
         padding: 20px;
@@ -42,12 +44,12 @@
         <div class="row">
                 <div class="col-lg-3">
                         <ul class="list-group list-group-flush" id="mymenu">
-                              <a href="#"><li class="list-group-item" id="homeLink"><i class="icon-home"></i> Dashboard Home</li></a>
-                              <a href="#"> <li class="list-group-item" id="updateLink"><i class="icon-user"></i> Update Profile</li></a>
-                              <a href="#"><li class="list-group-item" id="loanApplink"><i class="icon-user"></i> Loan Application </li></a>
-                              <a href="#"><li class="list-group-item" id="myLoanlink"><i class="icon-user"></i> My Loan</li></a>
+                              <a href="#"><li class="list-group-item" id="homeLink"><i class="fa fa-home"></i> Dashboard Home</li></a>
+                              <a href="#"> <li class="list-group-item" id="updateLink"><i class="fa fa-user"></i> Update Profile</li></a>
+                              <a href="#"><li class="list-group-item" id="loanApplink"><i class="fa fa-pencil"></i> Loan Application </li></a>
+                              <a href="#"><li class="list-group-item" id="myLoanlink"><i class="fa fa-list"></i> My Loan</li></a>
                               
-                               <li class="list-group-item"><i class="icon-power-off"></i> Logout</li>
+                               <li class="list-group-item" id="logout"><i class="fa fa-power-off"></i> Logout</li>
                         </ul>
                     </div>
             <div class="col-lg-9">
@@ -58,12 +60,10 @@
                                     <hr>
                                     <p class="mb-0">Enjoy the best of our Service!</p>
                                   </div>
-                                  <ul>
-                                      <li id="display"></li>
-                                  </ul>
+                                  
                     </div>
                    <!--myloan--> <div class="myloan">
-                        <p class="text-right"><button class="btn btn-success btn-sm"> New Loan </button></p>
+                        <p class="text-right"><button class="btn btn-success btn-sm"><i class="fa fa-plus"></i> New Loan </button></p>
                         <p class="text-center" id="title">YOUR LOAN HISTORY</p>
                         <table class="table">
                             <thead>
@@ -148,7 +148,7 @@
                             </div>
                             <p class="loanMessage" style="color:green;"></p>
                             <div>
-                                <button class="btn btn-success btn-sm" id="apply">Apply Now</button>
+                                <button class="btn btn-success btn-sm" id="apply"><i class="fa fa-save"></i> Apply Now</button>
                                
                             </div>
                     </div><!--end loan application -->
@@ -310,7 +310,7 @@
                                                         <div class="row">
                                                             
                                                             <div class="col-lg-6">
-                                                                <button class="btn btn-success" id="update">Update Profile</button>
+                                                                <button class="btn btn-success" id="update"><i class="fa fa-pencil"></i> Update Profile</button>
                                                             </div>
                                                             
                                                         </div>
