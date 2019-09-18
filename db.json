@@ -17,5 +17,17 @@
       "id": 2
     }
   ],
-  "loantable": []
+  "loantable": [
+    {
+      "employer": "Decagon",
+      "state": "Lagos",
+      "bank": "First Bank",
+      "acctno": "005664666",
+      "netsalary": "20000",
+      "eligibleamt": "5000",
+      "lesseramt": "2000",
+      "tenor": "1 Month",
+      "id": 1
+    }
+  ]
 }
