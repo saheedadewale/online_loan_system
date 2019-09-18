@@ -58,25 +58,17 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Package</th>
+                                    <th>#ID</th>
                                     <th>Amount</th>
                                     <th>Date Applied</th>
-                                    <th>Tenor</th>
+                                    <th>Repayment Tenor</th>
                                     <th>Status</th>
+                                    
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Bronze</td>
-                                    <td>15,000</td>
-                                    <td>Today</td>
-                                    <td>1 Month</td>
-                                    <td>Not yet Approve</td>
-                                    <td><button class="btn btn-danger btn-sm">Detele</button></td>
-                                </tr>
+                            <tbody id="myList">
+                               
                             </tbody>
                         </table>
                     </div><!--end myloan -->
@@ -147,6 +139,7 @@
                             <p class="loanMessage" style="color:green;"></p>
                             <div>
                                 <button class="btn btn-success btn-sm" id="apply">Apply Now</button>
+                               
                             </div>
                     </div><!--end loan application -->
             </div>
@@ -172,4 +165,14 @@
 </body>
 </html>
 <script>
+    $(document).ready(function(){
+        // $('#mydate').click(function(e){
+        //     e.preventDefault()
+        //     let ddate = new Date();
+        //     var month = ((ddate.getMonth().length+1) === 1)? (ddate.getMonth()+1) : '0' + (ddate.getMonth()+1);
+        //     var currentDate = ddate.getDate() + "/" + month + "/" + ddate.getFullYear();
+            
+        //     alert(currentDate)
+        // })
+    });
 </script>

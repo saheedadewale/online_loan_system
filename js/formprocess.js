@@ -1,5 +1,8 @@
 $(document).ready(function(){
     //hide login form
+    let myDate = $.now();
+    console.log(myDate);
+    
     $('.loginLink').click(function(event){
         event.preventDefault();
        $('.loginFormWrapper').hide();
@@ -69,6 +72,11 @@ $(document).ready(function(){
       const lesseramt = $('#lesseramt').val();
       const tenor = $('#tenor').val();
 
+      //get current date
+      let ddate = new Date();
+      let month = ((ddate.getMonth().length+1) === 1)? (ddate.getMonth()+1) : '0' + (ddate.getMonth()+1);
+      let currentDate = ddate.getDate() + "/" + month + "/" + ddate.getFullYear();
+
       //prevent user empty submission
       if(!employer || !bank || !acctno || !netsalary || !eligibleamt || ! tenor){
         alert("Field Left Unsupply");
@@ -87,6 +95,7 @@ $(document).ready(function(){
             eligibleamt,
             lesseramt,
             tenor,
+            currentDate,
           },
           beforeSend: function() {
             $('.loanMessage').html('Please Waite While Loading...');
@@ -97,4 +106,31 @@ $(document).ready(function(){
         });
       }
     });
+
+    //fetch Application
+    function getLoanDetails(){
+      $.ajax({
+        method: 'GET',
+        url: 'http://localhost:3004/loantable',
+        success: function(data){
+          let myLoan ='';
+          $.each(data, function(index, value){
+            myLoan +=`
+            <tr>
+            <td>1</td>
+                  <td>${index}</td>
+                  <td>${value.lesseramt}</td>
+                  <td>${value.currentDate}</td>
+                  <td>${value.tenor}</td>
+                  <td>${value.status}</td>
+                  <td><button class="btn btn-danger btn-sm">Detele</button></td>
+            </tr>
+            `;
+          });
+          $('#myList').html(myLoan);
+        }
+       
+      });
+    }
+    getLoanDetails();
 });

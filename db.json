@@ -28,6 +28,18 @@
       "lesseramt": "2000",
       "tenor": "1 Month",
       "id": 1
+    },
+    {
+      "employer": "FanMilk",
+      "state": "Oyo",
+      "bank": "GTB",
+      "acctno": "0076646466",
+      "netsalary": "100000",
+      "eligibleamt": "20000",
+      "lesseramt": "18000",
+      "tenor": "2 Month",
+      "currentDate": "18/09/2019",
+      "id": 2
     }
   ]
 }
