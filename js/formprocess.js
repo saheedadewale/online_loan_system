@@ -113,7 +113,7 @@ $(document).ready(function(){
       const fullname = $('#fullname').val();
       const amount = $('#amount').val();
       const phoneno = $('#phoneno').val();
-      const acctno = $('#acctno').val();
+      
       const tenor = $('#tenor').val();
       const status = 'Not Yet Approve';
 
@@ -123,8 +123,8 @@ $(document).ready(function(){
       let currentDate = ddate.getDate() + "/" + month + "/" + ddate.getFullYear();
 
       //prevent user empty submission
-      if(!employer || !bank || !acctno || !netsalary || !eligibleamt || ! tenor){
-        alert("Field Left Unsupply");
+      if(!amount || ! tenor){
+        $('.errMsg').html('Please Fill all the required fields')
         return false;
       }else{
          //making post request to the loan endpoint

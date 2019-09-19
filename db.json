@@ -19,27 +19,13 @@
   ],
   "loantable": [
     {
-      "employer": "Decagon",
-      "state": "Lagos",
-      "bank": "First Bank",
-      "acctno": "005664666",
-      "netsalary": "20000",
-      "eligibleamt": "5000",
-      "lesseramt": "2000",
+      "fullname": "Odewale Lawal",
+      "phoneno": "09065554432",
+      "amount": "15000",
       "tenor": "1 Month",
-      "id": 1
-    },
-    {
-      "employer": "FanMilk",
-      "state": "Oyo",
-      "bank": "GTB",
-      "acctno": "0076646466",
-      "netsalary": "100000",
-      "eligibleamt": "20000",
-      "lesseramt": "18000",
-      "tenor": "2 Month",
       "currentDate": "18/09/2019",
-      "id": 2
+      "status": "Not Yet Approve",
+      "id": 1
     }
   ],
   "profile": [
