@@ -159,13 +159,14 @@ $(document).ready(function(){
           $.each(data, function(index, value){
             myLoan +=`
             <tr>
-            <td>1</td>
-                  <td>${index}</td>
-                  <td>${value.lesseramt}</td>
-                  <td>${value.currentDate}</td>
+            <td>${index+1}</td>
+                  <td>${value.fullname}</td>
+                  <td>${value.phoneno}</td>
+                  <td>${value.amount}</td>
                   <td>${value.tenor}</td>
+                  <td>${value.currentDate}</td>
                   <td>${value.status}</td>
-                  <td><button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Detele</button></td>
+                  <td><button class="btn btn-danger btn-sm" id="deleteBtn"><i class="fa fa-trash"></i> Detele</button></td>
             </tr>
             `;
           });
@@ -202,42 +203,16 @@ $(document).ready(function(){
    }
    fetchRec();
     
-   
-   
-    //LOAD INFORMATION FROM DB;
-    // function userProf(fetch) { 
-
-    //   var cout = new Array();
-    //   var nm = new Array();
-    //   var live = '';
-    //   var strs = 
-    //       $.ajax({
-    //         url: "check.php",
-    //         type: "POST",
-    //         data: {fetch:fetch},
-    //         success: function (data) { 
-
-    //           if (data) { 
-    //             cout = data.split('`>'); 
-    //             for (var i= 1; i < cout.length; i++) {
-    //               $('.in'+i).val(cout[i]);
-    //               $('.p'+i).html(cout[i]);
-    //               $('#pack'+i).html(cout[i]);
-    //               $('#uploadPic'+i).attr('src',cout[i]);
-    //               $('#pac'+i).html(formatCurrency(cout[i]));
-    //               $('.count'+i).html(formatCurrency(cout[i]));
-    //               if (i==5) {
-    //                 live = cout[i];
-    //               }if (i == 6) {
-    //                 live = live + ", " +cout[i];
-    //               }
-    //               $('.p56').html(live); 
-    //             }
-    //           }
-    //         }
-    //       });
-    // }
-
+   //Delete Loan
+   $('#deleteBtn').click(function(e){
+     e.preventDefault();
+     alert('Delete Toogled')
+   });
+//New Loan Button
+$('#newLoan').click(function(e){
+  e.preventDefault()
+  alert('Delete Toogled')
+});
     
 //update profile
 
