@@ -24,6 +24,7 @@
       "bvn": "8897745734",
       "id": 3
     }
+  
   ],
   "loantable": [
     
@@ -100,6 +101,13 @@
       "banks": "FCMB",
       "accountNo": "0888488",
       "id": 2
+    }
+  ],
+  "admin":[
+    {
+      "username": "admin",
+      "password": "password",
+      "fullname": "Adekola Samuel"
     }
   ]
 }

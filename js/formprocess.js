@@ -322,6 +322,10 @@ $('body').on('click','.delete', function(e){
     }
 })
 })
+
+$('#login').click(function(e){
+    alert("Admin")
+})
 });
 
 
