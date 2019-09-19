@@ -327,7 +327,7 @@ $('body').on('click','.delete', function(e){
 })
 
 
-       $('#login').click(function(event) {
+       $('#adminlogin').click(function(event) {
         event.preventDefault();
         const username = $('#username').val();
         const password = $('#password').val();
