@@ -56,6 +56,53 @@ $('#newLoan').click(function(e){
 
 $('.allCustomers').hide();
 $('.allLoans').hide();
+$('.newAdmin').hide();
+$('.myAccount').hide();
+
+$('#adminHome').click(function(e){
+    e.preventDefault();
+$('.allCustomers').hide();
+$('.allLoans').hide();
+$('.newAdmin').hide();
+$('.myAccount').hide();
+$('.welcomes').fadeIn();
+})
+
+$('#updateCustomer').click(function(e){
+    e.preventDefault();
+$('.allCustomers').fadeIn();
+$('.allLoans').hide();
+$('.newAdmin').hide();
+$('.myAccount').hide();
+$('.welcomes').hide();
+})
+
+$('#allLoans').click(function(e){
+    e.preventDefault();
+$('.allCustomers').hide();
+$('.allLoans').fadeIn();
+$('.newAdmin').hide();
+$('.myAccount').hide();
+$('.welcomes').hide();
+})
+
+$('#newAdmin').click(function(e){
+    e.preventDefault();
+$('.allCustomers').hide();
+$('.allLoans').hide();
+$('.newAdmin').fadeIn();
+$('.myAccount').hide();
+$('.welcomes').hide();
+})
+
+$('#myAccount').click(function(e){
+    e.preventDefault();
+$('.allCustomers').hide();
+$('.allLoans').hide();
+$('.newAdmin').hide();
+$('.myAccount').fadeIn();
+$('.welcomes').hide();
+})
 //create account
 $('#createAcct').click(function(e){
     event.preventDefault();
@@ -298,12 +345,19 @@ $('#update').click(function(e){
         })
     }
 })
-
+//user logout function
 $('#logout').click(function(e){
     e.preventDefault()
     localStorage.clear();
    // $('.checkLogin').html('Kindly login');
     window.location.assign('signup.html');
+})
+//admin logout function
+$('#adminLogout').click(function(e){
+    e.preventDefault()
+    localStorage.clear();
+   // $('.checkLogin').html('Kindly login');
+    window.location.assign('adminlogin.html');
 })
 
 $('body').on('click','.delete', function(e){
@@ -421,6 +475,47 @@ function getLoan(){
      })
  }
  getLoan();
+
+ //new Admin
+ $('#createAdmin').click(function(e){
+    const surnameAdmin = $('#surnameAdmin').val()
+    const othernameAdmin = $('#othernameAdmin').val()
+    const username = $('#username').val()
+    const password = $('#password').val()
+    const cpassword = $('#cpassword').val()
+   // const status = "Pending"
+   // isDelete = false;
+    //get current date
+    
+
+    //prevent empty submission
+    if(!username || !password || !cpassword){
+        $('.errMsg').html("You need to enter username and password")
+        return
+    }else if(password !== cpassword){
+        $('.errMsg').html("Password mismatch")
+        return
+    }
+    else{
+        //add loan details to db.json
+        $.ajax({
+            method: 'POST',
+            url : 'http://localhost:3000/admin',
+            data:{
+                surnameAdmin,
+                othernameAdmin,
+                username,
+                password,   
+            },
+            beforeSend: function(){
+                $('.succMessage').html("In Progress....")
+            },
+            success: function(){
+                $('.succMessage').html("You have successfully Create a admin account")
+            }
+        })
+    }
+ })
 });
 
 

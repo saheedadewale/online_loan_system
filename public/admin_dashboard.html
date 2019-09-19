@@ -63,7 +63,7 @@
                        
                         <p class="text-center" id="title">CUSTOMER LOG</p>
                        <div class="table-responsive">
-                            <table class="table table-bordered table-responsive">
+                            <table class="table table-bordered table-hover">
                                     <thead>
                                         <tr>
                                             <th>#ID</th>
@@ -111,7 +111,84 @@
                                     </table>
                            </div>
                         </div>
-                   
+
+                        <!--New Admin-->
+                        <div class="newAdmin">
+                            <p class="text-center" id="title">CREATE NEW ADMIN</p>
+                            <p class="errMsg" style="background-color:lightcoral; color:white;"></p>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                                <input type="text" name="surname" id="surnameAdmin" placeholder="SurName" class="form-control">
+                                            </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                                <input type="text" name="othername" id="othernameAdmin" placeholder="Other name" class="form-control">
+                                            </div>
+                                </div>
+                            </div>  
+                            <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                    <input type="text" name="username" id="username" placeholder="username" class="form-control">
+                                                </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                                <input type="password" name="password" id="password" placeholder="Password" class="form-control">
+                                        </div>
+                                </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                    <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password" class="form-control">
+                                                </div>
+                                    </div>
+                                                                   
+                                </div> 
+                                <p class="succMessage" style="color:white; background-color:lightgreen;"></p>
+                                <div>
+                                    <button class="btn btn-success btn-sm" id="createAdmin"><i class="fa fa-save"></i> Create Admin</button>
+                                   
+                                </div>
+                        </div>
+                        <!--End New Admin-->
+                        <!--Myaccount -->
+                        <div class="myAccount">
+                            <p class="text-center" id="title">CHANGE PASSWORD</p>
+                            <p class="errMsg"></p>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                                <input type="password" name="oldPassword" id="oldPassword" placeholder="Old Password" class="form-control">
+                                            </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                                <input type="password" name="newPassword" id="newPassword" placeholder="New Password" class="form-control">
+                                            </div>
+                                </div>
+                            </div>  
+                            <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                    <input type="password" name="cNewPassword" id="cNewPassword" placeholder="Confirm Password" class="form-control">
+                                                </div>
+                                    </div>
+            
+                                    
+                                </div>
+                               
+                                <p class="loanMessage" style="color:green;"></p>
+                                <div>
+                                    <button class="btn btn-success btn-sm" id="updatePassword"><i class="fa fa-edit"></i> Update</button>
+                                   
+                                </div>
+                        </div>
+                        <!-- -->
 
                    
             </div>

@@ -24,10 +24,8 @@
       "bvn": "8897745734",
       "id": 3
     }
-  
   ],
   "loantable": [
-    
     {
       "fullname": "Oladele Adewle",
       "phoneno": "08038857000",
@@ -103,11 +101,20 @@
       "id": 2
     }
   ],
-  "admin":[
+  "admin": [
     {
       "username": "admin",
       "password": "password",
-      "fullname": "Adekola Samuel"
+      "surname": "Adekola",
+      "othername": "Samuel",
+      "id": 1
+    },
+    {
+      "surnameAdmin": "Kolawole",
+      "othernameAdmin": "Adewle",
+      "username": "admin",
+      "password": "123456",
+      "id": 2
     }
   ]
 }

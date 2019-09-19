@@ -46,7 +46,7 @@ a:hover{
     text-decoration: none;
     color: inherit;
 }
- .myloan, .loanApplication, .update {
+ .myloan, .loanApplication, .update,.allCustomer,.allLoans,.newAdmin,.myAccount {
     height: auto;
     border:1px solid orange;
     padding: 15px;
@@ -96,8 +96,9 @@ a:hover{
 }
 table{
     font-size: 12px;
+    width: auto;
 }
-#logout{
+#logout,#adminLogout{
     cursor: pointer;
 }
 .adminLogin{
