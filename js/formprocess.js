@@ -160,7 +160,7 @@ function getLoan(){
                     <td>${value.tenor}</td>
                     <td>${value.toDay}</td>
                     <td>${value.status}</td>
-                    <td><button class="btn btn-danger"><i class="fa fa-trash"></i></button></td>
+                    <td><button class="btn btn-danger delete" value="${value.id}"><i class="fa fa-trash"></i></button></td>
                 </tr>
                  `
             })
@@ -199,7 +199,8 @@ $('#apply').click(function(e){
     const amount = $('#amount').val()
     const tenor = $('#tenor').val()
     const email = window.localStorage.getItem('email')
-    const status = "Not Yet Approve"
+    const status = "Pending"
+    isDelete = false;
     //get current date
     const ddate = new Date()
     const month = ((ddate.getMonth().length+1) === 1)? (ddate.getMonth()+1): '0' +(ddate.getMonth()+1)
@@ -300,6 +301,26 @@ $('#logout').click(function(e){
     localStorage.clear();
    // $('.checkLogin').html('Kindly login');
     window.location.assign('signup.html');
+})
+
+$('body').on('click','.delete', function(e){
+    e.preventDefault();
+   let id = $(this).val()
+   //alert(id)
+   $.ajax({
+    "url": "http://localhost:3004/loantable/" + id,
+    "method": "DELETE",
+    data:{id},
+    beforeSend: function(){
+        alert("Deleted?")
+    },
+    success: function(data){
+       alert("Record Deleted Successfully")
+    },
+    error: function (e) {
+        alert("", JSON.stringify(e))
+    }
+})
 })
 });
 

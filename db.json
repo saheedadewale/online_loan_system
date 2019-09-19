@@ -26,24 +26,16 @@
     }
   ],
   "loantable": [
-    {
-      "fullname": "Odewale Lawal",
-      "phoneno": "09065554432",
-      "amount": "15000",
-      "tenor": "1 Month",
-      "currentDate": "18/09/2019",
-      "status": "Not Yet Approve",
-      "id": 1
-    },
+    
     {
       "fullname": "Oladele Adewle",
       "phoneno": "08038857000",
       "amount": "7500",
       "tenor": "1 Month",
       "email": "o.adewale17@gmail.com",
-      "status": "Not Yet Approve",
+      "status": "Pending",
       "toDay": "19/09/2019",
-      "id": 2
+      "id": 1
     }
   ],
   "profile": [
