@@ -72,7 +72,7 @@ $('#createAcct').click(function(e){
     //Make get request to check if the user already exist
     $.ajax({
       method: 'GET',
-      url: `http://localhost:3004/userstable?email=${email}`,
+      url: `http://localhost:3000/userstable?email=${email}`,
       data: {
         email,
       },
@@ -86,7 +86,7 @@ $('#createAcct').click(function(e){
           //Submit the user data if the user does not exist
           $.ajax({
             method: 'POST',
-            url: 'http://localhost:3004/userstable',
+            url: 'http://localhost:3000/userstable',
             data: {
               surname,
               othername,
@@ -119,7 +119,7 @@ $('#login').click(function(event) {
     //Check if the user is in the database
     $.ajax({
       method: 'GET',
-      url: `http://localhost:3004/userstable?email=${emailLog}&phoneno=${phonenoLog}`,
+      url: `http://localhost:3000/userstable?email=${emailLog}&phoneno=${phonenoLog}`,
       data: {
         email: emailLog,
         phoneno: phonenoLog,
@@ -149,7 +149,7 @@ function getLoan(){
     let mail = window.localStorage.getItem('email')
     $.ajax({
         method: 'GET',
-        url: `http://localhost:3004/loantable?email=${mail}`,
+        url: `http://localhost:3000/loantable?email=${mail}`,
         success: function(data){
             let list = ''
             $.each(data, function(index, value){
@@ -177,7 +177,7 @@ function loadRec(){
     let email = window.localStorage.getItem('email')
     $.ajax({
         method: 'GET',
-        url: `http://localhost:3004/userstable?email=${email}`,
+        url: `http://localhost:3000/userstable?email=${email}`,
         success: function(data){
             $.each(data, function(index, value){
              $('#fullname').val(value.surname+" "+ value.othername)
@@ -217,7 +217,7 @@ $('#apply').click(function(e){
         //add loan details to db.json
         $.ajax({
             method: 'POST',
-            url : 'http://localhost:3004/loantable',
+            url : 'http://localhost:3000/loantable',
             data:{
                 fullname,
                 phoneno,
@@ -269,7 +269,7 @@ $('#update').click(function(e){
         //add loan details to db.json
         $.ajax({
             method: 'POST',
-            url : 'http://localhost:3004/profile',
+            url : 'http://localhost:3000/profile',
             data:{
                 surnames,
                 othernames,
@@ -311,7 +311,7 @@ $('body').on('click','.delete', function(e){
    let id = $(this).val()
    //alert(id)
    $.ajax({
-    "url": "http://localhost:3004/loantable/" + id,
+    "url": "http://localhost:3000/loantable/" + id,
     "method": "DELETE",
     data:{id},
     beforeSend: function(){
@@ -338,7 +338,7 @@ $('body').on('click','.delete', function(e){
         //Check if the user is in the database
         $.ajax({
           method: 'GET',
-          url: `http://localhost:3004/admin?username=${username}&password=${password}`,
+          url: `http://localhost:3000/admin?username=${username}&password=${password}`,
           data: {
             username,
             password,
@@ -366,7 +366,7 @@ function getUser(){
    // let mail = window.localStorage.getItem('email')
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:3004/profile',
+        url: 'http://localhost:3000/profile',
         success: function(data){
             let listUser = ''
             $.each(data, function(index, value){
@@ -397,7 +397,7 @@ function getLoan(){
     // let mail = window.localStorage.getItem('email')
      $.ajax({
          method: 'GET',
-         url: 'http://localhost:3004/loantable',
+         url: 'http://localhost:3000/loantable',
          success: function(data){
              let listLoan = ''
              $.each(data, function(index, value){
