@@ -110,14 +110,12 @@ $(document).ready(function(){
     $('#apply').click(function(event){
       //getting value from the users
       event.preventDefault();
-      const employer = $('#employer').val();
-      const state = $('#state').val();
-      const bank = $('#bank').val();
+      const fullname = $('#fullname').val();
+      const amount = $('#amount').val();
+      const phoneno = $('#phoneno').val();
       const acctno = $('#acctno').val();
-      const netsalary = $('#netsalary').val();
-      const eligibleamt = $('#eligibleamt').val();
-      const lesseramt = $('#lesseramt').val();
       const tenor = $('#tenor').val();
+      const status = 'Not Yet Approve';
 
       //get current date
       let ddate = new Date();
@@ -134,15 +132,12 @@ $(document).ready(function(){
           method: 'POST',
           url: 'http://localhost:3004/loantable', 
           data: {
-            employer,
-            state,
-            bank,
-            acctno,
-            netsalary,
-            eligibleamt,
-            lesseramt,
+            fullname,
+            phoneno,
+            amount,
             tenor,
             currentDate,
+            status,
           },
           beforeSend: function() {
             $('.loanMessage').html('Please Waite While Loading...');
@@ -197,6 +192,8 @@ $(document).ready(function(){
          $('#emails').val(value.email)
          $('#phonenos').val(value.phoneno)
          $('#bvns').val(value.bvn)
+         $('#fullname').val(value.surname+" "+ value.othername);
+         $('#phoneno').val(value.phoneno);
           })
         }
 

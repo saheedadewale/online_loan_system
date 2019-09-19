@@ -65,87 +65,56 @@
                    <!--myloan--> <div class="myloan">
                         <p class="text-right"><button class="btn btn-success btn-sm"><i class="fa fa-plus"></i> New Loan </button></p>
                         <p class="text-center" id="title">YOUR LOAN HISTORY</p>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>#ID</th>
-                                    <th>Amount</th>
-                                    <th>Date Applied</th>
-                                    <th>Repayment Tenor</th>
-                                    <th>Status</th>
-                                    
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody id="myList">
-                               
-                            </tbody>
-                        </table>
+                       <div class="table-responsive">
+                            <table class="table table-bordered table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>#ID</th>
+                                            <th>Amount</th>
+                                            <th>Date Applied</th>
+                                            <th>Repayment Tenor</th>
+                                            <th>Status</th>
+                                            
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="myList">
+                                       
+                                    </tbody>
+                                </table>
+                       </div>
                     </div><!--end myloan -->
                     <!--loan application-->
                     <div class="loanApplication">
                         <p class="text-center" id="title">LOAN APPLICATION FORM</p>
-                        <div class="form-group">
-                            <input type="text" name="employer" id="employer" placeholder="Enter Your Employer" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" name="state" id="state">
-                                <option>--Which State do you work--</option>
-                                <option>Lagos</option>
-                                <option>Abuja</option>
-                                <option>Oyo</option>
-                                <option>Osun</option>
-                                <option>Ogun</option>
-                                <option>Ondo</option>
-                                <option>Ekiti</option>
-                                <option>Kwara</option>
-                                <option>Delta</option>
-                                <option>Edo</option>
-
-                            </select>
-                        </div>
-                        <div class="form-group">
-                                <select class="form-control" name="bank" id="bank">
-                                        <option>--Select Your Bank [Salary Bank]--</option>
-                                        <option>First Bank</option>
-                                        <option>GTB</option>
-                                        <option>Wema</option>
-                                        <option>Sterling</option>
-                                        <option>Jaiz</option>
-                                        <option>UBA</option>
-                                        <option>FCMB</option>
-                                        <option>Union</option>
-                                        <option>Stanbic</option>
-                                        <option>Skye</option>
-        
-                                    </select>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" name="acctno" id="acctno" placeholder="Enter Your Account Number [Salary Account]" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="number" name="netsalary" id="netsalary" placeholder="Enter Your Net Salary" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Amount Eligible</label>
-                            <input type="number" name="eligibleamt" id="eligibleamt" placeholder=" " class="form-control">
-                        </div>
-                        <div class="form-group">
-                               
-                                <input type="number" name="lesseramt" id="lesseramt" placeholder="Enter Lesser Amount" class="form-control">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                            <input type="text" name="fullname" id="fullname" placeholder="Full Name" class="form-control">
+                                        </div>
                             </div>
-                            <div class="form-group">
-                                <select class="form-control" name="tenor" id="tenor">
-                                    <option>---Select Loan Tenor---</option>
-                                    <option>1 Month</option>
-                                    <option>2 Month</option>
-                                    <option>3 Month</option>
-                                    <option>4 Month</option>
-                                    <option>5 Month</option>
-                                    <option>6 Month</option>
-                                    <option>12 Month</option>
-                                </select>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                            <input type="number" name="phoneno" id="phoneno" placeholder="Phone Number" class="form-control">
+                                        </div>
                             </div>
+                        </div>  
+                        <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                                <input type="number" name="amount" id="amount" placeholder="Amount(N)" class="form-control">
+                                            </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                                <select class="form-control" id="tenor" name="tenor">
+                                                    <option>---Select Loan Tenor---</option>
+                                                    <option>1 Month</option>
+                                                    <option>2 Month </option>
+                                                </select>
+                                            </div>
+                                </div>
+                            </div>    
                             <p class="loanMessage" style="color:green;"></p>
                             <div>
                                 <button class="btn btn-success btn-sm" id="apply"><i class="fa fa-save"></i> Apply Now</button>
