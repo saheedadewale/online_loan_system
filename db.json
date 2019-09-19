@@ -26,6 +26,16 @@
       "currentDate": "18/09/2019",
       "status": "Not Yet Approve",
       "id": 1
+    },
+    {
+      "fullname": "Oladele Adewle",
+      "phoneno": "08038857000",
+      "amount": "7500",
+      "tenor": "1 Month",
+      "email": "o.adewale17@gmail.com",
+      "status": "Not Yet Approve",
+      "toDay": "19/09/2019",
+      "id": 2
     }
   ],
   "profile": [

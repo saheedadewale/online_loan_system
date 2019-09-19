@@ -91,6 +91,9 @@ a:hover{
     font-weight: bold;
    
 }
+#nextHead,#bankHead,#employerHead{
+    color: orange;
+}
   /* .main-content form {
     width: 50%;
     height: fit-content;
