@@ -53,6 +53,9 @@ $('#newLoan').click(function(e){
     $('.update').hide();
     $('.welcome').hide();
 })
+
+$('.allCustomers').hide();
+$('.allLoans').hide();
 //create account
 $('#createAcct').click(function(e){
     event.preventDefault();
@@ -357,6 +360,67 @@ $('body').on('click','.delete', function(e){
         });
       });
 
+      //get all Users
+      //fetch data 
+function getUser(){
+   // let mail = window.localStorage.getItem('email')
+    $.ajax({
+        method: 'GET',
+        url: 'http://localhost:3004/profile',
+        success: function(data){
+            let listUser = ''
+            $.each(data, function(index, value){
+                listUser +=`
+                <tr>
+                    <td>${index+1}</td>
+                    <td>${value.surnames}</td>
+                    <td>${value.othernames}</td>
+                    <td>${value.emails}</td>
+                    <td>${value.phonenos}</td>
+                    <td>${value.sexs}</td>
+                    <td>${value.dob}</td>
+                    <td>${value.employers}</td>
+                    <td>${value.banks}</td>
+                    <td>${value.accountNo}</td>
+                    <td>${value.bvns}</td>
+                    <td><button class="btn btn-danger btn-sm deleteUser" value="${value.id}"><i class="fa fa-trash"></i></button> <button class="btn btn-danger btn-sm view" value="${value.id}"><i class="fa fa-eye"></i></button></td>
+                </tr>
+                 `
+            })
+           $('#myCustomer').html(listUser) 
+        }
+    })
+}
+getUser();
+//get all Loans record
+function getLoan(){
+    // let mail = window.localStorage.getItem('email')
+     $.ajax({
+         method: 'GET',
+         url: 'http://localhost:3004/loantable',
+         success: function(data){
+             let listLoan = ''
+             $.each(data, function(index, value){
+                listLoan +=`
+                 <tr>
+                     <td>${index+1}</td>
+                     <td>${value.fullname}</td>
+                     <td>${value.phoneno}</td>
+                     <td>${value.email}</td>
+                     <td>${value.amount}</td>
+                     <td>${value.tenor}</td>
+                     <td>${value.toDay}</td>
+                     <td>${value.status}</td>
+                     
+                     <td><button class="btn btn-danger btn-sm approve" value="${value.id}"><i class="fa fa-edit"></i></button> <button class="btn btn-danger btn-sm delete" value="${value.id}"><i class="fa fa-trash"></i></button></td>
+                 </tr>
+                  `
+             })
+            $('#loans').html(listLoan) 
+         }
+     })
+ }
+ getLoan();
 });
 
 
