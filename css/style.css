@@ -100,6 +100,19 @@ table{
 #logout{
     cursor: pointer;
 }
+.adminLogin{
+    margin-bottom: 180px;
+    margin-top: 50px;
+}
+/* .adminLoginWrapper{
+    border: 1px solid orange;
+    padding: 10px;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+} */
   /* .main-content form {
     width: 50%;
     height: fit-content;

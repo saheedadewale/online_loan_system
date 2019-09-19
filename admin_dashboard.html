@@ -43,45 +43,74 @@
                         <ul class="list-group list-group-flush" id="mymenu">
                               <a href="#"><li class="list-group-item" id="homeLink"><i class="fa fa-home"></i> Dashboard Home</li></a>
                               <a href="#"> <li class="list-group-item" id="updateLink"><i class="fa fa-user"></i> All Customers </li></a>
-                              <a href="#"><li class="list-group-item" id="loanApplink"><i class="fa fa-pencil"></i> All Loans </li></a>
-                              <a href="#"><li class="list-group-item" id="myLoanlink"><i class="fa fa-list"></i> Create New Admin</li></a>
-                              <a href="#"><li class="list-group-item" id="myLoanlink"><i class="fa fa-list"></i> My Account </li></a>
+                              <a href="#"><li class="list-group-item" id="loanApplink"><i class="fa fa-bar-chart"></i> All Loans </li></a>
+                              <a href="#"><li class="list-group-item" id="myLoanlink"><i class="fa fa-user"></i> Create New Admin</li></a>
+                              <a href="#"><li class="list-group-item" id="myLoanlink"><i class="fa fa-lock"></i> My Account </li></a>
                               
                                <li class="list-group-item" id="logout"><i class="fa fa-power-off"></i> Logout</li>
                         </ul>
                     </div>
             <div class="col-lg-9">
                     <div class="welcome">
-                            <div class="alert alert-success" role="alert">
+                            <div class="alert alert-warning" role="alert">
                                     <h4 class="alert-heading">Welcome Admin</h4>
                                     <p>You logged in as: name, all changes make will be adequately trackdown</p>
                                    
                                   </div>
                                   
                     </div>
-                   <!--myloan--> <div class="myloan">
-                        <p class="text-right"><button class="btn btn-success btn-sm" id="newLoan"><i class="fa fa-plus"></i> New Loan </button></p>
-                        <p class="text-center" id="title">YOUR LOAN HISTORY</p>
+                   <!--myloan--> <div class="allCustomers">
+                       
+                        <p class="text-center" id="title">CUSTOMER LOG</p>
                        <div class="table-responsive">
                             <table class="table table-bordered table-responsive">
                                     <thead>
                                         <tr>
                                             <th>#ID</th>
-                                            <th>Name(s)</th>
+                                            <th>Surname</th>
+                                            <th>Othername</th>
+                                            <th>Email</th>
                                             <th>Phone No</th>
-                                            <th>Amount(N)</th>
-                                            <th>Loan Tenor</th>
-                                            <th>Date Applied</th>
-                                            <th>Status</th>
+                                            <th>Sex</th>
+                                            <th>DOB</th>
+                                            <th>Employer</th>
+                                            <th>Bank</th>
+                                            <th>Account No</th>
+                                            <th>BVN</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="myList">
+                                    <tbody id="myCustomer">
                                        
                                     </tbody>
                                 </table>
                        </div>
                     </div><!--end myloan -->
+                    <div class="allLoans">
+                       
+                            <p class="text-center" id="title">LOAN LOG</p>
+                           <div class="table-responsive">
+                                <table class="table table-bordered table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th>#ID</th>
+                                                <th>Full Name</th>
+                                                <th>Phone No</th>
+                                                <th>Email</th>
+                                                <th>Amount</th>
+                                                <th>Tenor</th>
+                                                <th>Date Applied</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+            
+                                            </tr>
+                                        </thead>
+                                        <tbody id="loans">
+                                           
+                                        </tbody>
+                                    </table>
+                           </div>
+                        </div>
                    
 
                    

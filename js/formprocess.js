@@ -116,7 +116,7 @@ $('#login').click(function(event) {
     //Check if the user is in the database
     $.ajax({
       method: 'GET',
-      url: `http://localhost:3004/userstable?email=${emailLog}&password=${phonenoLog}`,
+      url: `http://localhost:3004/userstable?email=${emailLog}&phoneno=${phonenoLog}`,
       data: {
         email: emailLog,
         phoneno: phonenoLog,
@@ -323,9 +323,40 @@ $('body').on('click','.delete', function(e){
 })
 })
 
-$('#login').click(function(e){
-    alert("Admin")
-})
+
+       $('#login').click(function(event) {
+        event.preventDefault();
+        const username = $('#username').val();
+        const password = $('#password').val();
+        if (!username || !password) {
+          $('.errLogin').html('You have not input your login details');
+          return;
+        }
+        //Check if the user is in the database
+        $.ajax({
+          method: 'GET',
+          url: `http://localhost:3004/admin?username=${username}&password=${password}`,
+          data: {
+            username,
+            password,
+          },
+          beforeSend: function() {
+            $('.loginSuccess').html('Loading....');
+          },
+          success: function(response) {
+            if (response.length) {
+              $('.loginSuccess').html('Login sucessful');
+             // $('.checkLogin').html('You are logged in');
+              localStorage.setItem('username', username);
+              //redirect to home page if the login is successfull
+              window.location.assign('admin_dashboard.html');
+            } else {
+              $('.loginSuccess').html('Invalid Login Parameters');
+            }
+          },
+        });
+      });
+
 });
 
 
