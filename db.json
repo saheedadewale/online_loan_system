@@ -80,6 +80,26 @@
       "banks": "FCMB",
       "accountNo": "840453",
       "id": 1
+    },
+    {
+      "surnames": "Oladele",
+      "othernames": "Adewle",
+      "phonenos": "08038857000",
+      "emails": "o.adewale17@gmail.com",
+      "bvns": "33455566",
+      "sexs": "Male",
+      "marital": "Single",
+      "nofchild": "0",
+      "homeaddress": "Mushin Lagos",
+      "nextName": "Jide",
+      "relation": "Uncle",
+      "nextphone": "08077677577",
+      "nextaddress": "Mushin",
+      "employers": "Dangote",
+      "states": "Lagos",
+      "banks": "FCMB",
+      "accountNo": "0888488",
+      "id": 2
     }
   ]
 }

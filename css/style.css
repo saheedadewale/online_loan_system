@@ -94,6 +94,12 @@ a:hover{
 #nextHead,#bankHead,#employerHead{
     color: orange;
 }
+table{
+    font-size: 12px;
+}
+#logout{
+    cursor: pointer;
+}
   /* .main-content form {
     width: 50%;
     height: fit-content;

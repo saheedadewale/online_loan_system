@@ -42,28 +42,33 @@ $('#newLoan').click(function(e){
     $('.welcome').hide();
 })
 //fetch data 
-function getUserData(e){
-    e.preventDefault();
+function getLoan(){
+    let mail = window.localStorage.getItem('email')
     $.ajax({
         method: 'GET',
-        url: '',
+        url: `http://localhost:3004/loantable?email=${mail}`,
         success: function(data){
             let list = ''
             $.each(data, function(index, value){
                 list +=`
                 <tr>
-                    <td>${i+1}</td>
-                    <td>${value.surname}</td>
-                    <td>${i+1}</td>
-                    <td>${i+1}</td>
-                    <td>${i+1}</td>
-                    <td>${i+1}</td>
+                    <td>${index+1}</td>
+                    <td>${value.fullname}</td>
+                    <td>${value.phoneno}</td>
+                    <td>${value.email}</td>
+                    <td>${value.amount}</td>
+                    <td>${value.tenor}</td>
+                    <td>${value.toDay}</td>
+                    <td>${value.status}</td>
+                    <td><button class="btn btn-danger"><i class="fa fa-trash"></i></button></td>
                 </tr>
-                `
+                 `
             })
+           $('#myList').html(list) 
         }
     })
 }
+getLoan();
 
 function loadRec(){
     let email = window.localStorage.getItem('email')
@@ -127,4 +132,72 @@ $('#apply').click(function(e){
         })
     }
 
+})
+$('#update').click(function(e){
+    e.preventDefault();
+    const surnames = $('#surnames').val()
+    const othernames = $('#othernames').val()
+    const phonenos = $('#phonenos').val()
+    const emails = $('#emails').val()
+
+    const bvns = $('#bvns').val()
+    const sexs = $('#sexs').val()
+    const dob = $('#dob').val()
+    const marital = $('#marital').val()
+    const nofchild = $('#nofchild').val()
+    const homeaddress = $('#homeaddress').val()
+    const nextName = $('#nextName').val()
+    const relation = $('#relation').val()
+    const nextphone = $('#nextphone').val()
+    const nextaddress = $('#nextaddress').val()
+    const employers = $('#employers').val()
+    const states = $('#states').val()
+    const banks = $('#banks').val()
+    const accountNo = $('#accountNo').val()
+    
+    
+     //prevent empty submission
+     if(!accountNo || !banks || !employers || !surnames || !othernames || !emails){
+        $('.errMessage').html("Kindly fill all the required fields")
+      
+        return
+    }else{
+        //add loan details to db.json
+        $.ajax({
+            method: 'POST',
+            url : 'http://localhost:3004/profile',
+            data:{
+                surnames,
+                othernames,
+                phonenos,
+                emails,
+                bvns,
+                sexs,
+                marital,
+                nofchild,
+                homeaddress,
+                nextName,
+                relation,
+                nextphone,
+                nextaddress,
+                employers,
+                states,
+                banks,
+                accountNo,
+            },
+            beforeSend: function(){
+                $('.profileMessage').html("In Progress....")
+            },
+            success: function(){
+                $('.profileMessage').html("You have successfully apply for Loan")
+            }
+        })
+    }
+})
+
+$('#logout').click(function(e){
+    e.preventDefault()
+    localStorage.clear();
+   // $('.checkLogin').html('Kindly login');
+    window.location.assign('signup.html');
 })
