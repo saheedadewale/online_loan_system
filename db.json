@@ -34,6 +34,16 @@
       "currentDate": "18/09/2019",
       "status": "Not Yet Approve",
       "id": 1
+    },
+    {
+      "fullname": "Oladele Adewle",
+      "phoneno": "08038857000",
+      "amount": "7500",
+      "tenor": "1 Month",
+      "email": "o.adewale17@gmail.com",
+      "status": "Not Yet Approve",
+      "toDay": "19/09/2019",
+      "id": 2
     }
   ],
   "profile": [
@@ -78,6 +88,26 @@
       "banks": "FCMB",
       "accountNo": "840453",
       "id": 1
+    },
+    {
+      "surnames": "Oladele",
+      "othernames": "Adewle",
+      "phonenos": "08038857000",
+      "emails": "o.adewale17@gmail.com",
+      "bvns": "33455566",
+      "sexs": "Male",
+      "marital": "Single",
+      "nofchild": "0",
+      "homeaddress": "Mushin Lagos",
+      "nextName": "Jide",
+      "relation": "Uncle",
+      "nextphone": "08077677577",
+      "nextaddress": "Mushin",
+      "employers": "Dangote",
+      "states": "Lagos",
+      "banks": "FCMB",
+      "accountNo": "0888488",
+      "id": 2
     }
   ]
 }

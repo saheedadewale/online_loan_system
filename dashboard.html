@@ -51,7 +51,7 @@
                     </div>
             <div class="col-lg-9">
                     <div class="welcome">
-                            <div class="alert alert-success" role="alert">
+                            <div class="alert alert-warning" role="alert">
                                     <h4 class="alert-heading">Welcome User</h4>
                                     <p>Hello, warmth welcome to Decagon Loan Application Portal, we promise to serve you well, however, yoour trust is very important to us, please click on <strong>Update Profile</strong> to update your profile if you have not done so.</p>
                                     <hr>
@@ -69,6 +69,7 @@
                                             <th>#ID</th>
                                             <th>Name(s)</th>
                                             <th>Phone No</th>
+                                            <th>Email</th>
                                             <th>Amount(N)</th>
                                             <th>Loan Tenor</th>
                                             <th>Date Applied</th>
@@ -123,6 +124,7 @@
 
                     <div class="update">
                         <p id="title">UPDATE PROFILE</p>
+                        
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="form-group">
@@ -189,7 +191,7 @@
                                                  </div>
                                                  </div>
                                             </div>
-                                            <p>Next of Kin Information</p>
+                                            <p id="nextHead">Next of Kin Information</p>
                                             <div class="row">
                                                     <div class="col-lg-6 col-md-6 col-sm-12">
                                                         <div class="form-group">
@@ -222,7 +224,7 @@
                                                          </div>
                                                          </div>
                                                     </div>
-                                                <p>Employer's Information</p>
+                                                <p id="employerHead">Employer's Information</p>
                                                 <div class="row">
                                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                                             <div class="form-group">
@@ -248,7 +250,7 @@
                                                          </div>
                                                          </div>
                                                     </div>
-                                                    <p>Bank Information</p>
+                                                    <p id="bankHead">Bank Information</p>
                                                     <div class="row">
                                                             <div class="col-lg-6 col-md-6 col-sm-12">
                                                                 <div class="form-group">
@@ -270,11 +272,11 @@
                                                             </div>
                                                             <div class="col-lg-6 col-md-6 col-sm-12">
                                                             <div class="form-group">
-                                                              <input type="number" name="accountNo" id="accountNo" class="form-control">
+                                                              <input type="number" name="accountNo" id="accountNo" class="form-control" placeholder="Account Number">
                                                              </div>
                                                              </div>
                                                         </div>
-                                                        <p class="profilMessage"></p>
+                                                        <p class="errMessage" style="color:wheat; background-color:red"></p> <p class="profileMessage" style="color:white; background-color:lightgreen"></p>
                                                         <div class="row">
                                                             
                                                             <div class="col-lg-6">
