@@ -88,7 +88,7 @@ $('#login').click(function(event) {
         if (response.length) {
           $('.loginSuccess').html('Login sucessful');
          // $('.checkLogin').html('You are logged in');
-          localStorage.setItem('email', emailLogin);
+          localStorage.setItem('email', emailLog);
           //redirect to home page if the login is successfull
           window.location.assign('dashboard.html');
         } else {
