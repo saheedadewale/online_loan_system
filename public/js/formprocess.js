@@ -1,6 +1,7 @@
 $(document).ready(function(){
+let user = window.localStorage.getItem('username')
+$('.user').html(user)
 $('.loginWrapper').hide();
-
 $('.loginLink').click(function(e){
     e.preventDefault();
     $('.loginWrapper').fadeIn();
@@ -536,10 +537,10 @@ function getLoan(){
      else{
          //add loan details to db.json
         $.ajax({
-            method: 'POST',
-            url : 'http://localhost:3000/admin/'+ getPass,
+            method: 'PATCH',
+            url : 'http://localhost:3000/admin/1',
             data:{
-                newPassword,   
+                password:newPassword,   
             },
             beforeSend: function(){
                 $('.succPassword').html("In Progress....")

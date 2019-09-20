@@ -72,10 +72,11 @@
   "admin": [
     {
       "username": "admin",
-      "password": "password",
+      "password": "saheed",
       "surname": "Adekola",
       "othername": "Samuel",
       "id": 1
+      
     },
     {
       "surnameAdmin": "Kolawole",
