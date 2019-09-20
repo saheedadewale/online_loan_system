@@ -439,7 +439,7 @@ function getUser(){
                     <td>${value.banks}</td>
                     <td>${value.accountNo}</td>
                     <td>${value.bvns}</td>
-                    <td><button class="btn btn-danger btn-sm deleteUser" value="${value.id}"><i class="fa fa-trash"></i></button> <button class="btn btn-danger btn-sm view" value="${value.id}"><i class="fa fa-eye"></i></button></td>
+                    <td><button class="btn btn-danger btn-sm deleteUser" value="${value.id}"><i class="fa fa-trash"></i></button> <button class="btn btn-danger btn-sm view" value="${value.id}" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></button></td>
                 </tr>
                  `
             })
