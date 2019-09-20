@@ -46,9 +46,9 @@ a:hover{
     text-decoration: none;
     color: inherit;
 }
- .myloan, .loanApplication, .update,.allCustomer,.allLoans,.newAdmin,.myAccount {
+ .myloan, .loanApplication, .update,.allCustomers,.allLoans,.newAdmin,.myAccount {
     height: auto;
-    border:1px solid orange;
+    border:1px solid orange; 
     padding: 15px;
     border-bottom-color: orange;
     border-bottom-width: 4px;

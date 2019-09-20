@@ -359,7 +359,7 @@ $('#adminLogout').click(function(e){
    // $('.checkLogin').html('Kindly login');
     window.location.assign('adminlogin.html');
 })
-
+//delete loan by custometers
 $('body').on('click','.delete', function(e){
     e.preventDefault();
    let id = $(this).val()
@@ -405,6 +405,7 @@ $('body').on('click','.delete', function(e){
               $('.loginSuccess').html('Login sucessful');
              // $('.checkLogin').html('You are logged in');
               localStorage.setItem('username', username);
+              localStorage.setItem('password', password);
               //redirect to home page if the login is successfull
               window.location.assign('admin_dashboard.html');
             } else {
@@ -466,7 +467,7 @@ function getLoan(){
                      <td>${value.toDay}</td>
                      <td>${value.status}</td>
                      
-                     <td><button class="btn btn-danger btn-sm approve" value="${value.id}"><i class="fa fa-edit"></i></button> <button class="btn btn-danger btn-sm delete" value="${value.id}"><i class="fa fa-trash"></i></button></td>
+                     <td><button class="btn btn-danger btn-sm approve" value="${value.id}"> Approve</button> <button class="btn btn-danger btn-sm deleteLoan" value="${value.id}"><i class="fa fa-trash"></i></button></td>
                  </tr>
                   `
              })
@@ -483,11 +484,7 @@ function getLoan(){
     const username = $('#username').val()
     const password = $('#password').val()
     const cpassword = $('#cpassword').val()
-   // const status = "Pending"
-   // isDelete = false;
-    //get current date
-    
-
+     
     //prevent empty submission
     if(!username || !password || !cpassword){
         $('.errMsg').html("You need to enter username and password")
@@ -516,6 +513,140 @@ function getLoan(){
         })
     }
  })
+
+ //change password
+ 
+ $('#updatePassword').click(function(e){
+     e.preventDefault();
+     let getPass = window.localStorage.getItem('password')
+     const oldPassword = $('#oldPassword').val();
+     const newPassword = $('#newPassword').val();
+     const cNewPassword = $('#cNewPassword').val();
+
+     if(oldPassword !== getPass){
+         $('.errPassword').html("Your Old Password not correct");
+         return
+     }else if(newPassword !== cNewPassword){
+        $('.errPassword').html("Password Not Match");
+         return
+     }else if(!oldPassword || !newPassword || !cNewPassword){
+        $('.errPassword').html("You have not enter required fields");
+        return
+     }
+     else{
+         //add loan details to db.json
+        $.ajax({
+            method: 'POST',
+            url : 'http://localhost:3000/admin/'+ getPass,
+            data:{
+                newPassword,   
+            },
+            beforeSend: function(){
+                $('.succPassword').html("In Progress....")
+            },
+            success: function(){
+                $('.succPassword').html("You have successfully changed your password")
+            }
+        })
+     }
+ })
+
+ //delete customer by admin
+$('body').on('click','.deleteUser', function(e){
+    e.preventDefault();
+   let userid = $(this).val()
+   //alert(userid)
+   $.ajax({
+    "url": "http://localhost:3000/profile/" + userid,
+    "method": "DELETE",
+    data:{userid},
+    beforeSend: function(){
+    alert(confirm("Are you sure you wanna delete this record?"))
+    },
+    success: function(data){
+       alert("User Record Deleted Successfully")
+    },
+    error: function (e) {
+        alert("", JSON.stringify(e))
+    }
+    
+})
+})
+
+ //delete Loan
+ $('body').on('click','.deleteLoan', function(e){
+    e.preventDefault();
+   let userid = $(this).val()
+  // alert(userid)
+   $.ajax({
+    "url": "http://localhost:3000/loantable/" + userid,
+    "method": "DELETE",
+    data:{userid},
+    beforeSend: function(){
+    alert(confirm("Are you sure you wanna delete this record?"))
+    },
+    success: function(data){
+       alert("User Record Deleted Successfully")
+    },
+    error: function (e) {
+        alert("", JSON.stringify(e))
+    }  
+})
+})
+//approve loan
+$('body').on('click','.approve', function(e){
+    e.preventDefault();
+    let userid = $(this).val()
+    //alert(userid)
+    const status = "Approved"
+    $.ajax({
+        method: 'PATCH',
+        url : 'http://localhost:3000/loantable/'+ userid,
+        data:{
+            status   
+        },
+        beforeSend: function(){
+            alert("Approve in Progress")
+        },
+        success: function(){
+            alert("Approve Successfully!")
+        }
+    })
+  
+})
+ //view customer by admin  
+ $('body').on('click','.view', function(e){
+    e.preventDefault();
+   let userid = $(this).val()
+   //alert(userid)
+   $.ajax({
+    method: 'GET',
+    url: `http://localhost:3000/profile?id=${userid}`,
+    success: function(data){
+        $.each(data, function(index, value){
+       
+         $('#getSurname').val(value.surnames)
+         $('#getOthername').val(value.othernames)
+         $('#getEmail').val(value.emails)
+         $('#getPhone').val(value.phonenos)
+
+         $('#getMarital').val(value.marital)
+         $('#getSex').val(value.sexs)
+         $('#getHomeaddress').val(value.homeaddress)
+         $('#getNofchild').val(value.nofchild)
+         $('#getNextname').val(value.nextName)
+         $('#getRelation').val(value.relation)
+         $('#getNextaddress').val(value.nextaddress)
+         $('#getNextphone').val(value.nextphone)
+         $('#getEmployers').val(value.employers)
+         $('#getState').val(value.states)
+         $('#getBanks').val(value.banks)
+         $('#getAccountno').val(value.accountNo)
+         $('#getBvn').val(value.bvns)
+        })
+    }
+})
+})
 });
 
 

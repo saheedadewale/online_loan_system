@@ -32,54 +32,22 @@
       "amount": "7500",
       "tenor": "1 Month",
       "email": "o.adewale17@gmail.com",
-      "status": "Pending",
+      "status": "Approved",
       "toDay": "19/09/2019",
       "id": 1
+    },
+    {
+      "fullname": "Anthony Benson",
+      "phoneno": "09078884432",
+      "amount": "50000",
+      "tenor": "1 Month",
+      "email": "anthony@yahoo.com",
+      "status": "Pending",
+      "toDay": "19/09/2019",
+      "id": 2
     }
   ],
   "profile": [
-    {
-      "surnames": "Adewale",
-      "othernames": "Saheed",
-      "phonenos": "08077888688",
-      "emails": "saheed@gmail.com",
-      "bvns": "5643856",
-      "sexs": "Male",
-      "dob": "2019-09-11",
-      "marital": "Single",
-      "nofchild": "0",
-      "homeaddress": "Samanda",
-      "nextName": "Adekola",
-      "relation": "Sister",
-      "nextphone": "0806677575",
-      "nextaddress": "Somewhere in lagos",
-      "employers": "Dangote sugar",
-      "states": "Lagos",
-      "banks": "FCMB",
-      "accountNo": "840453",
-      "id": 1
-    },
-    {
-      "surnames": "Adewale",
-      "othernames": "Saheed",
-      "phonenos": "08077888688",
-      "emails": "kk@gmail.com",
-      "bvns": "5643856",
-      "sexs": "Male",
-      "dob": "2019-09-11",
-      "marital": "Single",
-      "nofchild": "0",
-      "homeaddress": "Samanda",
-      "nextName": "Adekola",
-      "relation": "Sister",
-      "nextphone": "0806677575",
-      "nextaddress": "Somewhere in lagos",
-      "employers": "Dangote sugar",
-      "states": "Lagos",
-      "banks": "FCMB",
-      "accountNo": "840453",
-      "id": 1
-    },
     {
       "surnames": "Oladele",
       "othernames": "Adewle",
@@ -98,7 +66,7 @@
       "states": "Lagos",
       "banks": "FCMB",
       "accountNo": "0888488",
-      "id": 2
+      "id": 3
     }
   ],
   "admin": [

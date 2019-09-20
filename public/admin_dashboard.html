@@ -26,6 +26,14 @@
     .container{
         padding: 20px;
     }
+    .mytable{
+        border: 1px solid grey;
+        width: 100%;
+        padding: 10px;
+        line-height: 30px;
+        text-align: center;
+        vertical-align: middle;
+    }
   
 
 </style>
@@ -63,7 +71,7 @@
                        
                         <p class="text-center" id="title">CUSTOMER LOG</p>
                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
+                            <table class="mytable table-hover" border="1">
                                     <thead>
                                         <tr>
                                             <th>#ID</th>
@@ -85,12 +93,126 @@
                                     </tbody>
                                 </table>
                        </div>
+                       <p></p>
+                       <!--modal -->
+                       <p style="color:orange;"><i>Personal Details:</i></p>
+                       <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getSurname" id="getSurname" class="form-control" placeholder="Surname">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getOthername" id="getOthername" class="form-control" placeholder="Othername">
+                            </div>
+                        </div>
+                       </div>
+                       
+                       <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getPhone" id="getPhone" class="form-control" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getEmail" id="getEmail" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                       </div>
+
+                       <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getSex" id="getSex" class="form-control" placeholder="Sex">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getMarital" id="getMarital" class="form-control" placeholder="Marital">
+                            </div>
+                        </div>
+                       </div>
+
+                       <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getNofchild" id="getNofchild" class="form-control" placeholder="No Of Children">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getHomeaddress" id="getHomeaddress" class="form-control" placeholder="Address">
+                            </div>
+                        </div>
+                       </div>
+                       <p style="color:orange;"><i>Next of Kin Details:</i></p>
+                       <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getNextname" id="getNextname" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getRelation" id="getRelation" class="form-control" placeholder="Relationship">
+                            </div>
+                        </div>
+                       </div>
+
+                       <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getNextphone" id="getNextphone" class="form-control" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getNextaddress" id="getNextaddress" class="form-control" placeholder="Address">
+                            </div>
+                        </div>
+                       </div>
+                       <p style="color:orange;"><i>Employer Details:</i></p>
+                       <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getEmployers" id="getEmployers" class="form-control" placeholder="Employer">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getState" id="getState" class="form-control" placeholder="Employer State">
+                            </div>
+                        </div>
+                       </div>
+
+                       <p style="color:orange;"><i>Bank Details:</i></p>
+                       <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getBanks" id="getBanks" class="form-control" placeholder="Banks">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getAccountno" id="getAccountno" class="form-control" placeholder="Account Number">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="form-group">
+                                <input type="text" name="getBvn" id="getBvn" class="form-control" placeholder="BVN">
+                            </div>
+                        </div>
+                       </div>
+                       <!--end modal -->
                     </div><!--end myloan -->
                     <div class="allLoans">
                        
                             <p class="text-center" id="title">LOAN LOG</p>
                            <div class="table-responsive">
-                                <table class="table table-bordered table-responsive">
+                                <table class="mytable" border="1">
                                         <thead>
                                             <tr>
                                                 <th>#ID</th>
@@ -159,7 +281,7 @@
                         <!--Myaccount -->
                         <div class="myAccount">
                             <p class="text-center" id="title">CHANGE PASSWORD</p>
-                            <p class="errMsg"></p>
+                            <p class="errPassword" style="background-color:lightcoral; color:white;"></p>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                         <div class="form-group">
@@ -182,7 +304,7 @@
                                     
                                 </div>
                                
-                                <p class="loanMessage" style="color:green;"></p>
+                                <p class="succPassword" style="color:white; background-color:lightgreen;"></p>
                                 <div>
                                     <button class="btn btn-success btn-sm" id="updatePassword"><i class="fa fa-edit"></i> Update</button>
                                    
