@@ -52,33 +52,32 @@
         font-weight: bold;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
-    /* .main-content{
-background-image: url('images/bg1.jpg');
-background-size: cover;
-content: "";
-display: block;
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: -2;
-opacity: 0.4;
-}
-    } */
+   
 
 </style>
 </head>
 <body>
 <!-- navbar -->
-<nav class="homeNav">
-   <span class="logo">Online Loan System</span>
-        <ul>
-          <a href="index.html"><li>Home</li></a>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </nav><!--end nav-->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
 <!--main content -->
 <main class="main-content">    
     <div class="container">
@@ -140,6 +139,7 @@ opacity: 0.4;
 <!--adding jQuery -->
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/formprocess.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 </html>

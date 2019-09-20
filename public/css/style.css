@@ -89,6 +89,7 @@ a:hover{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     font-weight: bold;
+    float: left;
    
 }
 #nextHead,#bankHead,#employerHead{
@@ -104,6 +105,31 @@ table{
 .adminLogin{
     margin-bottom: 180px;
     margin-top: 50px;
+}
+.welcomes{
+    margin-bottom: 360px;
+}
+.allCustomers{
+    margin-bottom: 290px;
+}
+.allLoans{
+    margin-bottom: 270px;
+}
+.newAdmin{
+    margin-bottom: 150px;
+}
+.myAccount{
+    margin-bottom: 220px;
+}
+.navbar{
+    height: 90px;
+    border-bottom-color: orange;
+    border-bottom-style: solid;
+    border-block-end-width: 3px;
+  
+}
+.bg-light{
+    background-color: #fff;
 }
 /* .adminLoginWrapper{
     border: 1px solid orange;
